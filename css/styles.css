@@ -1,3 +1,7 @@
+html {
+    --greytheme (color :207, 204, 204 )
+}
+
 body {
     background:#eee;
 }
@@ -20,6 +24,9 @@ body {
     width: 250px;
     background: #f5f5f5;
     border-right: 1px solid rgba(0,0,0,.1);
+    position: fixed;
+    height: 100%;
+
 }
 
 .search {
@@ -48,42 +55,81 @@ body {
 
 .nav-links {
     margin-top: 2rem;
+    color: grey;
+    list-style: none;
 }
 
+
+
+
 .nav-item {
+    padding-bottom: 0.2em;
+    margin-bottom: 0.3em;
+    
+    border-bottom: #f39c12 solid 1px;
+    text-transform: uppercase;
+    background-color: rgb(207, 204, 204);
     font-size: 1.2rem;
-}
+    border-radius: 5px;
+    }
+
+
 
 .page {
     padding: 5rem 2rem 2rem;
 }
 
 .content-focus {
+
     border-bottom: 3px solid #ccc;
     padding-bottom: 2rem;
     margin-bottom: 2rem;
     display: flex;
+    flex-direction: wrap;
     justify-content: center;
-    align-items: flex-start;
+    
 }
 
 .content-titles {
     width: 50%;
-    font-size: 3em;
-    margin-right: 2rem;
+    font-size: 2.3vw;
+    margin-right:0;
+    margin-left:1.5vw ;
+
+    text-align: right;
+    
 }
 
 .content-title {
+    justify-content: right;
     max-width: 450px;
     margin-left: auto;
 }
+figcaption {
+    background-image: url(../img/taureau.jpg);
+    background-size: cover;
+    box-sizing: border-box;
+
+    
+}
+figcaption .picture-desc {
+    
+    background-color: rgba(59, 55, 55, 0.938);
+    
+}
+
+main h2 {
+    color:rgb(207, 204, 204) ;
+
+}
 
 .content-picture {
-    width: 50%;
-    position: relative;
+    width: 70vh;
+
 }
 
 .rounded {
+    
     border-radius: 10px;
     overflow: hidden;
 }
@@ -122,11 +168,17 @@ body {
 }
 
 .articles-container {
+    display: flex;
+    flex-wrap: wrap;
     margin-top: 2rem;
 }
-
+article.card {
+width: 46%;
+margin: 2%;
+}
 .card {
     margin-bottom: 2rem;
+    
 }
 
 .card-title {
@@ -147,10 +199,33 @@ body {
 .card-footer {
     margin: 2rem 1rem;
 }
+footer {
+    display: flex;
+    justify-content: space-between;
+}
+footer .btn {
+    padding: 0.8vh 2vh;
+    font-size: 2vh;
+    align-items: center;
+    
 
-.btn {
-    padding: 1rem 2rem;
-    font-size: 1.2em;
+    border: solid;
+    border-color: #f39c12;
+    border-radius: 70px;
+
+    color: #f39c12;
+    text-decoration: none;
+    font-weight: bold;
+
+    
+
+}
+footer .btn:hover {
+    background-color:#f39c12 ;
+    color: white;
+    transition: 300ms;
+
+
 }
 
 .footer {
@@ -158,12 +233,17 @@ body {
     padding: 4rem 2rem;
     text-align: center;
     color: #aaa;
+    /* justify-content: space-between; */
 }
 
-/*
+
+
     Styles pour les écrans de moins de 1200px de large :
-*/
-/*
+@media screen (max-width:1200px) {
+    
+
+
+
 
     .content-focus {
         display:block;
@@ -190,13 +270,21 @@ body {
     .card {
         width:auto;
     }
+}
 
-*/
 
-/*
+
     Styles pour les écrans de moins de 900px de large :
-*/
-/*
+@media screen (max-width:900px) {
+.content-focus {
+    flex-direction:column;
+} 
+
+.articles-container {
+    display:flex ;
+    flex-direction:column;
+    
+}
     .header {
         position:static;
         width:auto;
@@ -234,4 +322,13 @@ body {
         margin-bottom: 0;
     }
 
-*/
+}
+
+@media screen (max-width:300px){
+
+    header.header{
+        width:100px
+    }
+
+    
+}
