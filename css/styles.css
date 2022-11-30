@@ -345,6 +345,15 @@ footer .btn:hover {
         width: 100%;
     }
 
+    .content ol{
+        font-size: 0.7rem;
+    }
+
+    main .presentation{
+        font-size: 0.7rem;
+    
+     }
+
 }
 
 @media screen and (max-width:900px) {
